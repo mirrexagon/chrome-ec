@@ -162,7 +162,7 @@ void interrupt_enable(void)
 	asm("cpsie i");
 }
 
-inline int in_interrupt_context(void)
+int in_interrupt_context(void)
 {
 	int ret;
 	asm("mrs %0, ipsr \n"             /* read exception number */
@@ -170,7 +170,7 @@ inline int in_interrupt_context(void)
 	return ret;
 }
 
-inline int get_interrupt_context(void)
+int get_interrupt_context(void)
 {
 	int ret;
 	asm("mrs %0, ipsr \n":"=r"(ret)); /* read exception number */
