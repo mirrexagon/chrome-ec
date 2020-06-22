@@ -28,7 +28,7 @@ BOARD ?= bds
 PROJECT?=ec
 
 # Output directory for build objects
-out?=build/$(BOARD)
+out=build/$(BOARD)
 
 # File containing configuration information
 config=$(out)/.config
