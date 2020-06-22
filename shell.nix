@@ -13,4 +13,5 @@ pkgs.mkShell {
   ];
 
   HOSTCC = "gcc";
+  BUILDCC = "arm-none-eabi-gcc";
 }
